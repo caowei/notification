@@ -29,19 +29,18 @@
   
   <body>
   
-  <spring:url value="/jobSearch" var="searchUrl" />
-  <spring:url value="/gapSearch" var="gapUrl" />
+  <spring:url value="/startJobServer" var="startJobServer" />
+  <spring:url value="/stopJobServer"  var="stopJobServer" />
     
 	<h1 align="center">Notification Home Page</h1>
 
 	<div class="container">	
 	<div class="jumbotron">
-  		<h2>This is a test page only</h2>
+  		<p class="warn">${message}<p>
+  		<h2>Job Server Running Status : ${isRun} </h2>
   		
-  		
-  		
-  		<p><a class="btn btn-primary btn-lg" href="${searchUrl}" role="button">Click to Start "Job Search" Demo</a></p>
-  		<p><a class="btn btn-primary btn-lg" href="${gapUrl}" role="button">Click to Start "Gap Analysis" Demo</a></p>
+  		<p><a class="btn btn-primary btn-lg" href="${startJobServer}" role="button">Click to Start Job Server.</a></p>
+  		<p><a class="btn btn-primary btn-lg" href="${stopJobServer}" role="button">Click to Stop Job Server</a></p>
 	</div>
 	
 	

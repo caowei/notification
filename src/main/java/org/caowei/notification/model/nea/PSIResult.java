@@ -149,6 +149,21 @@ public class PSIResult {
 		
 	}
 	
+	public static final String toString(List<PSIResult> results){
+		
+		if (results == null || results.size() == 0){
+			return "NA";
+		}
+		StringBuilder sb = new StringBuilder();
+		
+		for (PSIResult psiItem : results){
+			sb.append(psiItem.toString());
+			sb.append("             ");
+		}
+		
+		return sb.toString();
+	}
+	
 	@Override
 	public String toString() {
 		return "PSIResult [region=" + region + ", psi3Hours=" + psi3Hours + ", psi24Hours=" + psi24Hours

@@ -10,6 +10,7 @@ import javax.ws.rs.core.Response;
 import org.apache.log4j.Logger;
 import org.caowei.notification.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * 
@@ -18,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author Cao Wei
  *
  */
+@Service
 public class PushBulletClient {
 
 	 final static Logger logger = Logger.getLogger(PushBulletClient.class);

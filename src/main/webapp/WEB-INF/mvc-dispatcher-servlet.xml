@@ -12,7 +12,7 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
  
 	
-	<context:component-scan base-package="org.caowei.notification.controller,org.caowei.notification.service" />
+	<context:component-scan base-package="org.caowei.notification.controller,org.caowei.notification.service,org.caowei.notification.batch" />
 	<context:property-placeholder location="classpath:notification-config.properties" />
 	<mvc:annotation-driven />
 	
