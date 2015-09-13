@@ -169,7 +169,7 @@ public class PSIResult {
 		return "PSIResult [region=" + region + ", psi3Hours=" + psi3Hours + ", psi24Hours=" + psi24Hours
 				+ ", rawTimestamp=" + rawTimestamp + "]";
 	}
-	
+		
 	public static void main(String[] args) throws Exception {
 		
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

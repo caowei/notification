@@ -60,13 +60,31 @@ public class PSIUpdateJob implements BatchJob {
 		if (isResultUpdated(psiresult,lastUpdateResult)){
 			lastUpdateResult = psiresult;
 			
-			getPushClient().pushMessage("PSI Updates", PSIResult.toString(psiresult));
+			logger.info("This is updated record. Push Message to devices.");
+			pushMessages(lastUpdateResult);
 		
 		} else {
-			logger.debug("result is not update. No need to send notification again.");
+			logger.info("result is not updated. No need to send notification again.");
 		}
 
 		logger.info("Batch Job " + getJobName() + " ran successfully.");
+		
+	}
+	
+	private void pushMessages(List<PSIResult> results){
+		
+		if (results == null){
+			return;
+		}
+		
+		for (PSIResult psiResult : results){
+			if (psiResult.getRegion().equalsIgnoreCase("NRS") || 
+					psiResult.getRegion().equalsIgnoreCase("rNO")){
+				
+				getPushClient().pushMessage("PSI Updates", psiResult.toString());
+			}
+			
+		}
 		
 	}
 	
