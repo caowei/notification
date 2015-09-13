@@ -114,7 +114,7 @@ public class BatchServer {
 		
 		private volatile boolean runFlag = false;
 
-		private volatile int runFrequenceInMinutes = 1;
+		private volatile int runFrequenceInMinutes = 10;
 		
 		private volatile List<BatchJob> jobs = new ArrayList<BatchJob>();
 		
