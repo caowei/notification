@@ -108,9 +108,5 @@ public class PushBulletClient {
 		return response;
 	}
 	
-	public static void main(String[] args){
-		PushBulletClient client = new PushBulletClient();
-		client.pushMessage("https://api.pushbullet.com/v2/pushes", 
-				"heW7UNxMTYkgQvEQylyy0tTUfmfDaBz", "test", "main class test");
-	}
+	
 }
